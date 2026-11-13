@@ -1,0 +1,89 @@
+:root {
+    /* Cambia solo estos colores para cambiar toda la página */
+    --cafe: #672b1d;
+    --cafe-oscuro: #3f1d14;
+    --dorado: #d6a13b;
+    --crema: #fbf5ec;
+    --tinta: #2d2019;
+    --superficie: #fffdf9;
+    --borde-suave: #eadfd2;
+    --sombra-suave: 0 10px 28px rgba(63, 29, 20, .07);
+
+    /* Le decimos a Bootstrap que use nuestra paleta */
+    --bs-primary: #672b1d;
+    --bs-primary-rgb: 103, 43, 29;
+    --bs-body-bg: #fbf5ec;
+    --bs-body-color: #2d2019;
+    --bs-link-color-rgb: 103, 43, 29;
+    --bs-link-hover-color-rgb: 63, 29, 20;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Títulos con tipografía serif */
+h1, h2, h3, h4, h5, .navbar-brand, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Botones con nuestros colores */
+.btn-primary {
+    --bs-btn-bg: var(--cafe);
+    --bs-btn-border-color: var(--cafe);
+    --bs-btn-hover-bg: var(--cafe-oscuro);
+    --bs-btn-hover-border-color: var(--cafe-oscuro);
+    --bs-btn-active-bg: var(--cafe-oscuro);
+    --bs-btn-active-border-color: var(--cafe-oscuro);
+    --bs-btn-disabled-bg: var(--cafe);
+    --bs-btn-disabled-border-color: var(--cafe);
+}
+.btn-outline-primary {
+    --bs-btn-color: var(--cafe);
+    --bs-btn-border-color: var(--cafe);
+    --bs-btn-hover-bg: var(--cafe);
+    --bs-btn-hover-border-color: var(--cafe);
+    --bs-btn-active-bg: var(--cafe);
+    --bs-btn-active-border-color: var(--cafe);
+}
+.btn-dorado {
+    --bs-btn-bg: var(--dorado);
+    --bs-btn-border-color: var(--dorado);
+    --bs-btn-color: var(--tinta);
+    --bs-btn-hover-bg: #b38930;
+    --bs-btn-hover-border-color: #b38930;
+    --bs-btn-hover-color: var(--tinta);
+}
+
+/* Campos de formulario */
+.form-control:focus, .form-select:focus {
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 .25rem rgba(214, 161, 59, .22);
+}
+
+/* Acabado común del diseño del ZIP */
+body { background: var(--crema); color: var(--tinta); }
+.card, .modal-content {
+    border-color: var(--borde-suave);
+    border-radius: 1rem;
+    box-shadow: var(--sombra-suave);
+}
+.form-control, .form-select {
+    border-color: #e5d8c9;
+    border-radius: .7rem;
+    background-color: var(--superficie);
+}
+.btn {
+    border-radius: .7rem;
+    font-weight: 600;
+    transition: transform .16s ease, box-shadow .16s ease, background-color .16s ease;
+}
+.btn-primary:hover, .btn-dorado:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 .35rem .8rem rgba(63, 29, 20, .13);
+}
+
+/* Ajustes globales de acabado */
+::selection { background: #ead5a7; color: #382317; }
+a { transition: color .16s ease; }
+:focus-visible { outline-color: #c99a36; }
